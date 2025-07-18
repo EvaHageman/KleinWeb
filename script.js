@@ -130,7 +130,8 @@ Promise.all([
   const teamColors = {
   "BG": "teal",
   "PL": "#FF00B9",
-  "LR": "blue"
+  "LR": "blue",
+  "Non": "Grey"
 };
 
   container.insert("rect", ":first-child")

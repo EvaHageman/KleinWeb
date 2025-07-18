@@ -85,6 +85,7 @@ source,target,type
 15,40,Kissed
 15,42,Exes
 15,46,Kissed
+15,74,Relationship
 19,20,Exes
 19,1,Kissed
 19,2,Kissed
@@ -159,3 +160,4 @@ source,target,type
 66,12,Hooked up
 66,13,Kissed
 67,70,Relationship
+43,73,Relationship
