@@ -16,6 +16,7 @@ source,target,type
 1,31,Kissed
 1,32,Kissed
 1,34,Kissed
+1,71,Kissed
 2,3,Kissed
 2,4,Exes
 2,8,Kissed
@@ -30,12 +31,17 @@ source,target,type
 2,40,Dated
 2,55,Kissed
 2,56,Kissed
+2,71,Kissed
 3,4,Kissed
-3,6,Kissed
 3,7,Kissed
+3,10,Rumor
+3,27,Kissed
+3,34,Kissed
 3,41,Kissed
-3,56,Kissed
+3,56,Hooked up
 3,68,Kissed
+3,71,Kissed
+3,72,Kissed
 4,6,Kissed
 4,25,Kissed
 4,26,Kissed
@@ -92,7 +98,7 @@ source,target,type
 23,40,Kissed
 23,52,Kissed
 24,34,Kissed
-26,27,Relationship
+26,25,Relationship
 26,34,Kissed
 28,29,Exes
 29,61,Kissed
