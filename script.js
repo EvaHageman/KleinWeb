@@ -9,41 +9,51 @@ let container = svg.append("g");
 let playersData, linksData;
 let isHighlighted = false;
 
-// Global: highlight a player by ID
+// Highlight with friends-of-friends semi-highlighted
 function highlightPlayer(selectedId) {
   isHighlighted = true;
+
+  // Find direct connections
+  const directConnections = new Set();
+  linksData.forEach(l => {
+    if (l.source.id === selectedId) directConnections.add(l.target.id);
+    if (l.target.id === selectedId) directConnections.add(l.source.id);
+  });
 
   container.selectAll("path.link")
     .transition().duration(300)
     .attr("stroke-width", linkData => {
-      return (linkData.source.id === selectedId || linkData.target.id === selectedId) ? 4 : 1;
+      const isDirect = (linkData.source.id === selectedId || linkData.target.id === selectedId);
+      const isBetweenConnections = directConnections.has(linkData.source.id) && directConnections.has(linkData.target.id);
+      return isDirect ? 4 : (isBetweenConnections ? 3 : 1);
     })
     .attr("opacity", linkData => {
-      return (linkData.source.id === selectedId || linkData.target.id === selectedId) ? 1 : 0.1;
+      const isDirect = (linkData.source.id === selectedId || linkData.target.id === selectedId);
+      const isBetweenConnections = directConnections.has(linkData.source.id) && directConnections.has(linkData.target.id);
+      return isDirect ? 1 : (isBetweenConnections ? 0.2 : 0);
     });
 
   container.selectAll(".link-label textPath")
     .transition().duration(300)
     .attr("opacity", labelData => {
-      return (labelData.source.id === selectedId || labelData.target.id === selectedId) ? 1 : 0.1;
+      const isDirect = (labelData.source.id === selectedId || labelData.target.id === selectedId);
+      const isBetweenConnections = directConnections.has(labelData.source.id) && directConnections.has(labelData.target.id);
+      return isDirect ? 1 : (isBetweenConnections ? 0.2 : 0);
     });
 
   container.selectAll("circle")
     .transition().duration(300)
     .attr("opacity", nodeData => {
-      return (selectedId === nodeData.id || linksData.some(l => (l.source.id === selectedId || l.target.id === selectedId) &&
-                                                               (l.source.id === nodeData.id || l.target.id === nodeData.id))) ? 1 : 0.1;
+      return (selectedId === nodeData.id || directConnections.has(nodeData.id)) ? 1 : 0.1;
     });
 
   container.selectAll(".label")
     .transition().duration(300)
     .attr("opacity", nodeData => {
-      return (selectedId === nodeData.id || linksData.some(l => (l.source.id === selectedId || l.target.id === selectedId) &&
-                                                               (l.source.id === nodeData.id || l.target.id === nodeData.id))) ? 1 : 0.1;
+      return (selectedId === nodeData.id || directConnections.has(nodeData.id)) ? 1 : 0.1;
     });
 }
 
-// Global: search player by name
 function searchPlayer() {
   const query = document.getElementById('search').value.toLowerCase().trim();
   const player = playersData.find(p => p.name.toLowerCase() === query);
@@ -105,7 +115,7 @@ Promise.all([
     connectionCounts[l.source]++;
     connectionCounts[l.target]++;
   });
-  
+
     // Define link styles by type
   const linkStyles = {
     "relationship":   { color: "#78A65A",   dash: "" },
