@@ -1,0 +1,154 @@
+source,target,type
+1,2,Relationship
+1,3,Exes
+1,12,Kissed
+1,5,Hooked up
+1,4,Exes
+1,6,Kissed
+1,10,Kissed
+1,15,Kissed
+1,24,Kissed
+1,25,Kissed
+1,26,Kissed
+1,27,Kissed
+1,28,Kissed
+1,29,Kissed
+1,31,Kissed
+1,32,Kissed
+1,34,Kissed
+2,3,Kissed
+2,4,Exes
+2,8,Kissed
+2,19,Kissed
+2,20,Kissed
+2,27,Kissed
+2,28,Kissed
+2,29,Kissed
+2,30,Kissed
+2,34,Kissed
+2,39,Dated
+2,40,Dated
+2,55,Kissed
+2,56,Kissed
+3,4,Kissed
+3,6,Kissed
+3,7,Kissed
+3,41,Kissed
+3,56,Kissed
+3,68,Kissed
+4,6,Kissed
+4,25,Kissed
+4,26,Kissed
+4,27,Kissed
+4,42,Kissed
+4,51,Hooked up
+6,30,Rumor
+7,8,Kissed
+7,6,Kissed
+7,39,Kissed
+7,41,Kissed
+8,21,Hooked up
+8,1,Kissed
+8,2,Kissed
+8,4,Kissed
+8,3,Kissed
+8,14,Kissed
+8,67,Dated
+9,1,Kissed
+9,5,Hooked up
+9,13,Kissed
+9,15,Exes
+9,40,Kissed
+9,47,Exes
+13,14,Relationship
+13,23,Exes
+16,17,Relationship
+10,16,Kissed
+10,46,Dated
+10,52,Dated
+11,4,Exes
+11,6,Kissed
+11,12,Exes
+11,18,Exes
+11,34,Kissed
+11,35,Kissed
+13,69,Kissed
+15,11,Exes
+15,12,Exes
+15,36,Kissed
+15,40,Kissed
+15,42,Exes
+15,46,Kissed
+19,20,Exes
+19,1,Kissed
+19,2,Kissed
+19,21,Dated
+19,42,Hooked up
+19,63,Kissed
+19,51,Hooked up
+21,22,Relationship
+21,34,Kissed
+23,24,Kissed
+23,40,Kissed
+23,52,Kissed
+24,34,Kissed
+26,27,Relationship
+26,34,Kissed
+28,29,Exes
+29,61,Kissed
+30,2,Kissed
+30,31,Exes
+30,55,Kissed
+29,33,Relationship
+34,1,Kissed
+34,21,Kissed
+34,24,Kissed
+34,35,Kissed
+34,36,Kissed
+37,38,Hooked up
+39,40,Relationship
+39,23,Kissed
+40,46,Exes
+41,3,Kissed
+41,57,Exes
+43,2,Kissed
+43,15,Kissed
+43,19,Kissed
+43,22,Kissed
+43,39,Kissed
+43,44,Kissed
+43,45,Kissed
+43,46,Kissed
+46,10,Dated
+46,50,Kissed
+46,52,Dated
+48,2,Kissed
+48,3,Kissed
+48,8,Exes
+48,21,Kissed
+48,34,Kissed
+48,35,Kissed
+48,39,Kissed
+48,40,Kissed
+49,41,Kissed
+49,50,Relationship
+49,60,Kissed
+50,54,Kissed
+50,60,Hooked up
+51,21,Kissed
+52,15,Hooked up
+52,30,Kissed
+52,39,Kissed
+52,40,Kissed
+52,53,Kissed
+57,12,Hooked up
+57,15,Exes
+57,41,Exes
+57,48,Hooked up
+58,59,Hooked up
+60,12,Hooked up
+64,3,Kissed
+65,52,Kissed
+66,12,Hooked up
+66,13,Kissed
+67,70,Relationship

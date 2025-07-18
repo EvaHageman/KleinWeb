@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hockey Team Relationship Chart</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+
+    body { 
+    background: #111; 
+    color: #fff; 
+    font-family: sans-serif;
+   }
+    line {
+    transition: stroke-width 0.3s, opacity 0.3s;
+    stroke-width: 2; 
+   }
+    text { 
+    fill: #fff; font-size: 12px; text-anchor: middle; 
+    }
+    #search-container {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(0,0,0,0.7);
+      padding: 10px;
+      border-radius: 8px;
+    }
+    input {
+      padding: 5px;
+      font-size: 14px;
+    }
+    button {
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div id="search-container">
+    <input id="search" type="text" placeholder="Search player...">
+    <button onclick="searchPlayer()">Search</button>
+  </div>
+    <svg></svg>
+  <script src="script.js"></script>
+</body>
+</html>
