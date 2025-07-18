@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Hockey Team Relationship Chart</title>
   <script src="https://d3js.org/d3.v7.min.js"></script>
-  <style>
+ <style>
 
     body { 
     background: #111; 
@@ -36,7 +36,15 @@
     }
   </style>
 </head>
-<body>
+<body onload="checkPassword()">
+<script>
+function checkPassword() {
+  const password = prompt("Enter password:");
+  if (password !== "HockeyTest") {
+    document.body.innerHTML = "<h1 style='color:white;text-align:center;margin-top:20%'>Access Denied</h1>";
+  }
+}
+</script>
   <div id="search-container">
     <input id="search" type="text" placeholder="Search player...">
     <button onclick="searchPlayer()">Search</button>
